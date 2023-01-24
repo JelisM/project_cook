@@ -1,23 +1,53 @@
-const recipes = [
-    {id: 125223, recipe: 'Mac and Cheese', done: true},
-    {id: 127904, recipe: 'Enchiladas', done: false},
-    {id: 139608, recipe: 'Tacos', done: false}
-  ];
-  
-  module.exports = {
-    getAll,
-    getOne
-  };
-  
-  function getAll() {
-    return recipes;
-  }
+const mongoose = require('mongoose');
+// Shortcut to the mongoose.Schema class
+const Schema = mongoose.Schema;
 
-  function getOne(id) {
-    // URL params are strings - convert to a number
-    id = parseInt(id);
-    // The Array.prototype.find iterator method is
-    // ideal for finding objects within an array
-    return recipes.find(recipe => recipe.id === id);
-  }
-  
+const reviewSchema = new Schema({
+  content: {
+    type: String,
+    required: true
+  },
+  rating: {
+    type: Number,
+    min: 1,
+    max: 5,
+    default: 5
+  },
+  user: {
+    type: Schema.Types.ObjectId,
+    ref: 'User',
+    required: true
+  },
+  userName: String,
+  userAvatar: String
+}, {
+  timestamps: true
+})
+
+const movieSchema = new Schema({
+  title: {
+    type: String,
+    required: true
+  },
+  releaseYear: {
+    type: Number,
+    default: function() {
+      return new Date().getFullYear();
+    },
+    min: 1927
+  },
+  mpaaRating: {
+    type: String,
+    enum: ['G', 'PG', 'PG-13', 'R']
+  },
+  cast: [{
+    type: Schema.Types.ObjectId,
+    ref: 'Performer'
+  }],
+  nowShowing: {type: Boolean, default: false},
+  reviews: [reviewSchema]
+}, {
+  timestamps: true
+});
+
+module.exports = mongoose.model('Movie', movieSchema);
