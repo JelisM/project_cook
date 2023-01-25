@@ -16,6 +16,7 @@ require('./config/passport');
 
 var indexRouter = require('./routes/index');
 var recipesRouter = require('./routes/recipes');
+var reviewaRoutes = require('./routes/comments')
 
 var app = express();
 

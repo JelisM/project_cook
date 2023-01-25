@@ -3,9 +3,14 @@
 
   module.exports = {
     index,
-   
-    new: newRecipe,
-   
+     new: newRecipe,
+      create,
+     show,
+    delete: deleteRecipe,
+    editRecipe
+  
+
+    
   };
  
   function index(req, res) {
@@ -14,23 +19,46 @@
     });
   }
   
-  //function show
+  function show(req, res) {
+    Recipe.findById(req.params.id, function (err, recipe) {
+       console.log(err)
+       res.render('recipes/show', { title: 'Recipe Details', recipe})
+
+    })
+  }
+
+
   
   function newRecipe(req, res) {
     res.render("recipes/new", { title: "Add Recipe" });
   }
   
-    //function create
+    function create(req, res) {
+      const recipe = new Recipe (req.body)
+      recipe.save(function (err){
+        if (err) {
+          console.log(err)
+          res.redirect('/recipes/new')
+      } else {
+          res.redirect('/recipes')
+      }
 
-    // One way to create data using a mongoose model
-    // Movie.create(req.body, function(err, newMovie) {
-    //   // functionality to run after movie has been created
-    // })
-   // const recipe = new Recipe(req.body);
-   // recipe.save(function (err) {
-   //   if (err) return res.redirect("/recipes/new");
-   //   console.log(recipe);
-   //   res.redirect(`/recipes/${recipe._id}`);
-   // });
-  
+      })
+
+
+    }
+
+
+    function deleteRecipe(req, res) {
+      Recipe.findByIdAndDelete(req.params.id, function (err, deleteRecipe) {
+          console.log("Delete Recipe: ", deleteRecipe)
+          res.redirect('/recipes');
+      })
+  };
+  function editRecipe(req, res) {
+      Recipe.findByIdAndUpdate(req.params.id, req.body, function (err, editRecipe) {
+          console.log("Edit Recipe: ", editRecipe)
+          res.redirect('/recipes');
+      })
+  }
   

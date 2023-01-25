@@ -1,8 +1,139 @@
 body {
-  padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  /* background-color: rgba(200, 206, 200, 0.543); */
 }
+.container {
+  flex-direction: row;
+  display: flex;
+}
+#newDrink  {
+  color: rgb(92, 167, 213)e;
+  font-weight: bolder;
+  font-size: 30px;
+  margin-right: 75%;
+}
+h1 { 
+  color : rgb(92, 167, 213); 
+  font-weight: bold;
+  margin-top: 0px;
+  text-align: center;
+  font-weight: bolder;
+  }
+a:hover { 
+  font-weight: bold;
+  font-size: x-large;
+  background: rgb(193, 101, 101)
+}
+footer { 
+  font-weight: bolder; 
+}
+nav { 
+  position: fixed;
+  color: floralwhite;
+  font-weight: bolder;
+  font-size: x-large; 
+  }
+  footer {
+    bottom: 0;
+    width: 100%;
+    font-size: x-large;
+    font-weight: bolder;
+    border: white;
+    color: black;
+   }
+   li{ 
+     font-size: medium;
+     background-color: black;
+   }
+   ul li {
+    background: none;
+    margin: 15px;
+   }
+  label { 
+    font-weight: bolder;
+    font-size: large;
+    color: white;
+    background-color: black;
+    border-style: solid;
+  }
+  div {
+    text-align: justify;
+  }
+  #newDrink { 
+      color:lightskyblue  ;
+      font-weight: bolder;
+      font-size: 30px;
+      margin-right: 75%;
+  }
+  #drinksName { 
+    font-size: medium;
+    background-color: rgb(193, 101, 101);
+    width: 25%; 
+    text-align: center;
+    font-weight: bolder;
+    font-size: 20px;
+    border-radius: 15px;  
+  }
+  #comments { 
+    color: black;
+    font-size: xx-large;
+  }
+  #userName  {
+    font-weight: bolder;
+    font-size: x-large;
+  }
+  #home{ 
+    margin-right: 95%;
+  }
+  textarea {
+    resize: none;
+    border: 1px solid #EEEEEE;
+    box-shadow: 1px 1px 0 #DDDDDD;
+    height: 100px;
+    width: 400px;
+  }
+  .button, input{
+    display: inline-block;
+    padding: 15px 25px;
+    font-size: 24px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color:  floralwhite;
+    background-color: lightcoral;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+  }
+  
+  .button:hover {background-color: #3e8e41}
+  
+  .button:active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }
+  #show {
+    font-size: 20px;
+    margin-left: 20PX; 
+  }
 
-a {
-  color: #00B7FF;
+  input { 
+    color: black;
+    margin-left: 0px;
+  }
+#delete { 
+  color: red; 
+  border-radius: 12px;
+}
+#box1 { 
+  text-align: left;
+  margin: right;
+}
+#edit-drink-form {
+  margin-left: 0px;
+}
+ul { 
+  margin-left: 20%;
 }
