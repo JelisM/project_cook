@@ -4,23 +4,24 @@
 <ul>
   <% recipes.forEach(function (r) { %>
      <% if(user) { %>
-          <% if (user.name === r.user) { %>
-         <form action="/recipes/<%= r._id %>?_method=DELETE" class="delete-form" method="POST">
-          <button id="delete" type="submit">Delete Recipe</button>
-        </form>
+           <% if (user?._id.equals(r.user)) { %>
+         <!-- <form action="/recipes/<%= r._id %>?_method=DELETE" class="delete-form" method="POST"> -->
+          <!-- <button id="delete" type="submit">Delete Recipe</button> -->
+        <!-- </form> -->
           <%  } else { %>
             <% } %>
             <div id="userName">
 
               <li id="comments"> <%= r.name %> </li>
             </div>
-            <li id="recipesName">Added By: <%=r.user %></li>
+            <li id="recipesName">Added By: <%=r.user?._id %></li>
           </div>
-          <li><%= r.ref %></li>
+      
           <label>Comments</label>
           <% if(r.comments.length){ %> 
             <% r.comments.forEach(function (c) { %>
               <li><%= c.content %></li>
+              
               <%  }) %>
               <% } %>
            <section>
@@ -29,7 +30,11 @@
                   <textarea name="content"></textarea>
                   <input type="submit" value="Add Comment">
                 </form>
+
+                <form action="/recipes/<%= r._id %>?_method=DELETE" class="delete-form" method="POST">
+                  <button id="delete" type="submit">Delete Recipe</button>
               </section>    
+              
         <% } %>
     <% }) %>
 </ul>
