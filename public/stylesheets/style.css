@@ -59,13 +59,13 @@ nav {
   div {
     text-align: justify;
   }
-  #newDrink { 
+  #newRecipe { 
       color:lightskyblue  ;
       font-weight: bolder;
       font-size: 30px;
       margin-right: 75%;
   }
-  #drinksName { 
+  #RecipesName { 
     font-size: medium;
     background-color: rgb(193, 101, 101);
     width: 25%; 
@@ -131,7 +131,7 @@ nav {
   text-align: left;
   margin: right;
 }
-#edit-drink-form {
+#edit-recipe-form {
   margin-left: 0px;
 }
 ul { 
