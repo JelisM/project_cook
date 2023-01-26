@@ -6,7 +6,7 @@ body {
   flex-direction: row;
   display: flex;
 }
-#newDrink  {
+#newRecipe  {
   color: rgb(92, 167, 213)e;
   font-weight: bolder;
   font-size: 30px;
