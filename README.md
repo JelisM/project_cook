@@ -6,32 +6,35 @@ On this app users can add their own recipes.
 
 
 
-### Here are some images on how the game works
+### Here is how the app looks like
 
 
 
-**When the game starts**
-![Screenshot 2023-01-05 at 8 56 12 PM](https://user-images.githubusercontent.com/120356496/210916291-3a1914a6-b785-4155-bcdb-6449db09d355.png)
+**Home Page**
+<img width="1680" alt="Screenshot 2023-01-27 at 11 04 52 AM" src="https://user-images.githubusercontent.com/120356496/215134860-9761423f-c477-421c-b2ef-c895d2b5ba84.png">
 
 
+**Log in Screen**
+<img width="1680" alt="Screenshot 2023-01-27 at 11 05 01 AM" src="https://user-images.githubusercontent.com/120356496/215135127-e6269ee3-163c-43df-93f8-4b05946187bf.png">
 
-**When the user lose the game**
-<img width="1329" alt="Screenshot 2023-01-05 at 8 47 23 PM" src="https://user-images.githubusercontent.com/120356496/210916415-f8d9256b-5ffd-4605-802f-5595a3a08244.png">
+**Recipe**
 
-**When the user wins the game**
-![Screenshot 2023-01-05 at 10 36 47 PM](https://user-images.githubusercontent.com/120356496/210925587-447f927a-c99b-454e-a5b1-20014b0842c5.png)
+<img width="1680" alt="Screenshot 2023-01-27 at 11 23 18 AM" src="https://user-images.githubusercontent.com/120356496/215139567-79c11659-778d-4302-9b4b-bdf59fa7c59b.png">
 
+**Edit Recipe**
+<img width="1680" alt="Screenshot 2023-01-27 at 11 23 37 AM" src="https://user-images.githubusercontent.com/120356496/215139619-dd706e29-4f6d-4ca8-b7db-15f7db42de61.png">
 
 
 ### Ice box features:
 
-- Add sound
-- Add emoji or pictures
-- Add effects for the numbers spin
-- Add features for bet money
-- Calculate and show the user funds and based on that let the user keep  playing.
+- Add Pictures
+- Enable the user to add pictures
+- Display a ingredient list
+- Search recipes
+- Search recipes by  name or ingredient
+
 ---
 #
 **Give it a try!!!**
-- https://jelism.github.io/slot_machine/ 
+- https://project-cook.herokuapp.com/recipes/
 ---
