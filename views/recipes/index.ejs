@@ -11,7 +11,6 @@
           <%  } else { %>
             <% } %>
             <div id="userName">
-
               <li id="comments"> <%= r.name %> </li>
             </div>
             <li id="recipesName">Added By: <%=r.user?._id %></li>
@@ -24,17 +23,17 @@
               
               <%  }) %>
               <% } %>
-           <section>
-                <li><a href="/recipes/<%= r._id %>">Whats in it??</a> </li>
+           
+              <section>
+                <!-- <li><a href="/recipes/<%= r._id %>">Whats in it??</a> </li> -->
                 <form id="add-comment-form" method="POST" action="/recipes/<%= r._id %>/comments">
                   <textarea name="content"></textarea>
                   <input type="submit" value="Add Comment">
                 </form>
-
                 <form action="/recipes/<%= r._id %>?_method=DELETE" class="delete-form" method="POST">
                   <button id="delete" type="submit">Delete Recipe</button>
               </section>    
-              
+             
         <% } %>
     <% }) %>
 </ul>

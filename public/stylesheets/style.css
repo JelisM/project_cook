@@ -1,6 +1,6 @@
 body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  /* background-color: rgba(200, 206, 200, 0.543); */
+   background-color: rgba(200, 206, 200, 0.543); 
 }
 .container {
   flex-direction: row;
@@ -43,7 +43,7 @@ nav {
    }
    li{ 
      font-size: medium;
-     background-color: black;
+     background-color: rgb(67, 110, 250);
    }
    ul li {
     background: none;
@@ -94,8 +94,8 @@ nav {
   }
   .button, input{
     display: inline-block;
-    padding: 15px 25px;
-    font-size: 24px;
+    padding: 10px 5px;
+    font-size: 12px;
     cursor: pointer;
     text-align: center;
     text-decoration: none;
@@ -120,7 +120,7 @@ nav {
   }
 
   input { 
-    color: black;
+    color: rgb(46, 93, 160);
     margin-left: 0px;
   }
 #delete { 
@@ -136,4 +136,15 @@ nav {
 }
 ul { 
   margin-left: 20%;
+}
+
+.login img {
+  height: 30px;
+}
+
+.login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 34px;
 }

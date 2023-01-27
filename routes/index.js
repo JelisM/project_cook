@@ -4,7 +4,7 @@ const passport = require('passport')
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.redirect('/recipes')
+  res.render('index', {user: req.user}); 
 });
 router.get('/auth/google', passport.authenticate(
   // Which passport strategy is being used?
