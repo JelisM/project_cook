@@ -38,5 +38,5 @@ https://trello.com/b/x0txdd0r/project2
 ---
 #
 **Give it a try!!!**
-- https://project-cook.herokuapp.com/recipes/
+- https://project-cook.herokuapp.com
 ---
