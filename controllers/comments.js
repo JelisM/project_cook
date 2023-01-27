@@ -14,7 +14,7 @@ function create(req, res) {
 
         recipe.comments.push(req.body)
         recipe.save(function(err) {
-            res.redirect(`/recipes/${recipe._id}`)
+            res.redirect(`/recipes`)
         })
     })
 }
@@ -25,7 +25,7 @@ async function deleteComment(req, res, next) {
         if (!recipe) return res.redirect('/recipes')
         recipe.comments.remove(req.params.id)
         await recipe.save()
-        res.redirect(`/recipes/${recipe._id}`)
+        res.redirect(`/recipes`)
     } catch(err) {
         return next(err)
     }
