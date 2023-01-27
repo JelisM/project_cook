@@ -2,7 +2,9 @@
 
 This is a very basic Cooking App that was made using Node.Js, Express, Mongoose,EJS, CSS3.
 
-On this app users can add their own recipes.
+On this app users can add their own recipes, edit, comment and save.
+
+https://trello.com/b/x0txdd0r/project2
 
 
 
